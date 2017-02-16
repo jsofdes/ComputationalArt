@@ -64,8 +64,8 @@ def remap_interval(val,
         >>> remap_interval(5, 4, 6, 1, 2)
         1.5
     """
-    # TODO: implement this
-    pass
+    output_val = output_interval_end - ((input_interval_end - val) * (output_interval_end - output_interval_start) / (input_interval_end - input_interval_start))
+    return output_val
 
 
 def color_map(val):
@@ -143,8 +143,8 @@ if __name__ == '__main__':
     # Create some computational art!
     # TODO: Un-comment the generate_art function call after you
     #       implement remap_interval and evaluate_random_function
-    # generate_art("myart.png")
+    generate_art("myart.png")
 
     # Test that PIL is installed correctly
     # TODO: Comment or remove this function call after testing PIL install
-    test_image("noise.png")
+    # test_image("noise.png")
